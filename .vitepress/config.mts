@@ -9,7 +9,7 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#74a6df' }],
-    ['link', { rel: 'icon', href: '/assert/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
   themeConfig: {

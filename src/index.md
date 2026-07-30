@@ -6,7 +6,7 @@ hero:
   text: "osu! 查分机器人~"
   tagline: 查询成绩、谱面与群排行，分析 Miss，并生成单人或多人同屏回放视频...持续更新中！
   image:
-    src: /assert/image/head-img.png
+    src: /head-img.png
     alt: Seira
   actions:
     - theme: brand

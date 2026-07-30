@@ -5,7 +5,7 @@
 
 可以使用 QQ 号 `4015467215` 添加 Seira，也可以扫描二维码添加：
 
-![4015467215](/assert/image/qr.png)
+![4015467215](/md-asset/image/qr.png)
 
 ## 第一次使用
 
