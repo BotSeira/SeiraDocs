@@ -29,4 +29,4 @@
 
 Seira使用lazer的数据源，所以和stable中现实的可能会有一定差异。
 此外，成绩处理的一些流程也可能无法完全还原游戏的处理操作。
-若遇到了结果差异过大导致无法正常使用的情况，可在 [GitHub Issues](https://github.com/ZayrexDev/Seira/issues) 提交复现信息。
+若遇到了结果差异过大导致无法正常使用的情况，可在 [GitHub Issues](https://github.com/BotSeira/SeiraCore/issues) 提交复现信息。

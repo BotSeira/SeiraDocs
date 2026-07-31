@@ -76,7 +76,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ZayrexDev/Seira' }
+      { icon: 'github', link: 'https://github.com/BotSeira' }
     ],
 
     footer: {

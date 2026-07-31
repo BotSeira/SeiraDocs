@@ -16,8 +16,8 @@
 ## 获取并编译
 
 ```powershell
-git clone https://github.com/ZayrexDev/Seira.git
-cd Seira/SeiraCore
+git clone https://github.com/BotSeira/SeiraCore.git
+cd SeiraCore
 mvn -U clean package
 ```
 

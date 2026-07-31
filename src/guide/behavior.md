@@ -51,5 +51,5 @@ Seira 收到群消息时，会记录“群—用户”关系。只有已经绑�
 | 无法解析时间范围     | `/r` 时间范围格式错误                          |
 | 未找到渲染请求       | 当前用户没有最近渲染任务，且未提供任务 ID      |
 
-遇到稳定复现的问题，可在 [Seira Issues](https://github.com/ZayrexDev/Seira/issues) 提交反馈，
+遇到稳定复现的问题，可在 [Seira Issues](https://github.com/BotSeira/SeiraCore/issues) 提交反馈，
 并附上指令、使用场景、错误提示和大致时间；不要公开配置密钥、OAuth Token 或数据库内容。

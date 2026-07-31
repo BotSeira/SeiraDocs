@@ -13,7 +13,7 @@ Seira 是一个面向 QQ 私聊和群聊的 osu! 查询机器人。
 
 ## 数据来源
 
-SeiraCore 本身负责 QQ 平台相关功能实现。具体的数据由 [oStella](https://github.com/ZayrexDev/oStella) 提供。
+SeiraCore 本身负责 QQ 平台相关功能实现。具体的数据由 [oStella](https://github.com/BotSeira/oStella) 提供。
 
 ::: tip 数据差异
 Seira 使用 lazer 版本的 osu!API 作为数据源。与 stable 客户端显示的数据可能存在差异，某些成绩处理过程也不一定能完全还原游戏内行为。
