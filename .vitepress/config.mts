@@ -35,6 +35,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '开始使用', link: '/overview/use' },
       { text: '指令', link: '/overview/commands' },
+      { text: '更新日志', link: '/overview/changelog' },
       { text: '部署', link: '/operations/deployment' }
     ],
 
@@ -45,7 +46,8 @@ export default defineConfig({
           { text: '介绍', link: '/overview/intro' },
           { text: '开始使用机器人', link: '/overview/use' },
           { text: '完整指令列表', link: '/overview/commands' },
-          { text: '常见问题', link: '/overview/faq' }
+          { text: '常见问题', link: '/overview/faq' },
+          { text: '更新日志', link: '/overview/changelog' }
         ]
       },
       {

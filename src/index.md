@@ -34,4 +34,4 @@ features:
     details: 自动截取高光、按时间段渲染单人回放，以及生成群友同屏回放视频。
 ---
 
-Seira 依赖 [oStella](https://github.com/BotSeira/oStella) 提供 osu! 数据与渲染服务。文档适用于 SeiraCore `1.8.0` 版本，更新可能会有延后~
+Seira 依赖 [oStella](https://github.com/BotSeira/oStella) 提供 osu! 数据与渲染服务。文档适用于 SeiraCore `1.8.1` 版本，更新可能会有延后~
