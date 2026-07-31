@@ -10,6 +10,7 @@ seira:
   directUrl: "https://example.com/direct"
   queueMessageInGroup: false
   debugMode: false
+  watchIntervalMinutes: 5
   adminIds: []
 
 binding:
@@ -37,19 +38,16 @@ cos:
 
 ## `seira`
 
-| 字段                  | 类型       | 作用                                               |
-|-----------------------|------------|----------------------------------------------------|
-| `sqlitePath`          | 字符串     | SQLite 数据库路径；父目录应可写                    |
-| `directUrl`           | 字符串     | 消息按钮的跳转服务根地址，用于谱面、玩家和房间链接 |
-| `queueMessageInGroup` | 布尔       | 是否在群聊显示普通异步任务的“已加入队列”提示       |
-| `debugMode`           | 布尔       | 启用 DEBUG 日志和 `/debug.*` 路由                  |
-| `adminIds`            | 字符串列表 | 允许使用调试路由的 QQ 用户 OpenID                  |
+| 字段                   | 类型       | 作用                                               |
+|------------------------|------------|----------------------------------------------------|
+| `sqlitePath`           | 字符串     | SQLite 数据库路径；父目录应可写                    |
+| `directUrl`            | 字符串     | 消息按钮的跳转服务根地址，用于谱面、玩家和房间链接 |
+| `queueMessageInGroup`  | 布尔       | 是否在群聊显示普通异步任务的“已加入队列”提示       |
+| `debugMode`            | 布尔       | 启用 DEBUG 日志和 `/debug.*` 路由                  |
+| `watchIntervalMinutes` | 整数       | 监视间隔时间，单位为分钟                           |
+| `adminIds`             | 字符串列表 | 允许使用调试路由的 QQ 用户 OpenID                  |
 
 `debugMode` 和 `adminIds` 必须同时满足才能使用调试指令。管理员 ID 可先通过 `/inspect` 取得。
-
-::: warning 示例配置中的遗留字段
-资源内的 `seira-example-config.yml` 仍包含 `replayPath`，但当前 `SeiraConfig` 记录没有该字段，附件处理也不会读取它。不要依赖该字段控制回放存储路径。
-:::
 
 ## `binding`
 
