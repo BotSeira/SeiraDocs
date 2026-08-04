@@ -27,7 +27,6 @@
 | [`/sa`](/commands/scores#sa)       | `/sa [成绩ID/快捷查询]`          | 获取成绩分析图；可使用最近目标                     |
 | [`/ma`](/commands/scores#ma)       | `/ma [成绩ID/快捷查询] [n/#n]` ` | 列出 Miss 或可视化第 n 个 Miss                     |
 | [`/u`](/commands/scores#u)         | `/u <UID/用户名/@用户>`          | 获取玩家资料和最好成绩摘要                         |
-| [`/watch`](/commands/scores#watch) | `/watch <add/del/list> [目标]`   | 开始/移除/列出当前群中的成绩监视                   |
 
 详见[成绩查询与分析](/commands/scores)。
 
@@ -55,6 +54,15 @@
 | [`/rstat`](/commands/replays#rstat) | `/rstat [任务ID]`                   | 查询渲染状态或重新取得已完成视频 | 省略 ID 时查自己的最近任务 |
 
 详见[回放与视频](/commands/replays)。
+
+## 交互与娱乐
+| 指令                            | 用法                           | 作用                             | 备注   |
+|---------------------------------|--------------------------------|----------------------------------|--------|
+| [`/rg`   ](/commands/fun#rg)    | `/rg <start/#Rank/end>`        | 开始、参与或结束猜 Rank 游戏     | 仅群聊 |
+| [`/watch`](/commands/fun#watch) | `/watch <add/del/list> [目标]` | 开始/移除/列出当前群中的成绩监视 | 仅群聊 |
+
+详见[交互与娱乐](/commands/fun)。
+
 
 ## 状态与帮助
 
