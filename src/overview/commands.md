@@ -8,7 +8,7 @@
 | [`/unbind`](/commands/account-social#unbind)             | `/unbind`                  | 解除当前 QQ 用户的绑定     | 无                               |
 | [`/clearhistory`](/commands/account-social#clearhistory) | `/clearhistory`            | 清除自己在群聊中的成员记录 | 会影响群筛选和群排行             |
 | [`/f`](/commands/account-social#f)                       | `/f`                       | 获取好友关系               | 需绑定；群聊中只显示群内相关玩家 |
-| [`/fall`](/commands/account-social#fall)                 | `/fall`                    | 获取完整好友关系           | 需绑定                           |
+| [`/fall`](/commands/account-social#f)                    | `/fall`                    | 获取完整好友关系           | 需绑定                           |
 | [`/fclear`](/commands/account-social#fclear)             | `/fclear`                  | 清除已同步的好友记录       | 需绑定                           |
 | [`/lb`](/commands/account-social#lb)                     | `/lb [谱面目标] [UID列表]` | 表现分排行或谱面排行       | 无参数时使用当前群成员           |
 | [`/mp`](/commands/account-social#mp)                     | `/mp`                      | 查看当前多人房间           | 需绑定且 OAuth Token 有效        |
