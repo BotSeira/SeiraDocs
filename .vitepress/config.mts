@@ -53,6 +53,7 @@ export default defineConfig({
       {
         text: '使用指南',
         items: [
+          { text: '成绩与回放', link: '/guide/score-replay' },
           { text: '目标与快捷查询', link: '/guide/targets' },
           { text: '排队、上下文与文件', link: '/guide/behavior' }
         ]
