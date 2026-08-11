@@ -65,7 +65,8 @@ export default defineConfig({
           { text: '谱面与谱面集', link: '/commands/beatmaps' },
           { text: '回放与视频', link: '/commands/replays' },
           { text: '交互与娱乐', link: '/commands/fun' },
-          { text: '状态与帮助', link: '/commands/general' }
+          { text: '状态与帮助', link: '/commands/general' },
+          { text: '其它指令', link: '/commands/misc' }
         ]
       },
       {
