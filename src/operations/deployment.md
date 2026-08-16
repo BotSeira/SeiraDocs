@@ -11,7 +11,7 @@
 - osu! OAuth 应用，用于 `/bind`、好友和多人房间。
 - 腾讯云 COS 存储桶，用于机器人发送图片和媒体。
 
-当前项目版本为 `1.8.0`，主类为 `xyz.zcraft.seira.Seira`。
+本篇文章更新之时，项目版本为 `1.10.1`，主类为 `xyz.zcraft.seira.Seira`。
 
 ## 获取并编译
 
@@ -24,7 +24,7 @@ mvn -U clean package
 打包成功后会生成包含依赖的可执行 JAR，名称类似：
 
 ```text
-target/SeiraCore-1.8.0-jar-with-dependencies.jar
+target/SeiraCore-1.10.1-jar-with-dependencies.jar
 ```
 
 也可以直接从源码启动：
@@ -44,7 +44,7 @@ mvn -U clean compile exec:java
 编辑新生成的 `config.yml`，补齐所有凭据，再次执行启动命令。使用 JAR 时：
 
 ```powershell
-java -jar target/SeiraCore-1.8.0-jar-with-dependencies.jar
+java -jar target/SeiraCore-1.10.1-jar-with-dependencies.jar
 ```
 
 `config.yml`、SQLite 数据库和日志等相对路径都以启动时的工作目录为基准。建议始终从固定目录启动。
@@ -57,7 +57,7 @@ java -jar target/SeiraCore-1.8.0-jar-with-dependencies.jar
 2. 在 `debugMode` 开启时把根日志级别调整为 DEBUG。
 3. 初始化 SQLite 数据库。
 4. 启动 osu! OAuth 回调监听器。
-5. 初始化 QQ Token、COS、统计和每日人品数据。
+5. 初始化并启动 QQ Token、COS、统计、成绩监视、消息同步和每日人品等服务。
 6. 连接 QQ Gateway；断线后等待约 3 秒并自动重连。
 
 因此应先确保 oStella、数据库目录、OAuth 回调网络和外部凭据均可用。
