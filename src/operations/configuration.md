@@ -11,6 +11,7 @@ seira:
   queueMessageInGroup: false
   debugMode: false
   watchIntervalMinutes: 5
+  multiplayerWatchIntervalSeconds: 30
   adminIds: []
 
 binding:
@@ -38,14 +39,15 @@ cos:
 
 ## `seira`
 
-| 字段                   | 类型       | 作用                                               |
-|------------------------|------------|----------------------------------------------------|
-| `sqlitePath`           | 字符串     | SQLite 数据库路径；父目录应可写                    |
-| `directUrl`            | 字符串     | 消息按钮的跳转服务根地址，用于谱面、玩家和房间链接 |
-| `queueMessageInGroup`  | 布尔       | 是否在群聊显示普通异步任务的“已加入队列”提示       |
-| `debugMode`            | 布尔       | 启用 DEBUG 日志和 `/debug.*` 路由                  |
-| `watchIntervalMinutes` | 整数       | 监视间隔时间，单位为分钟                           |
-| `adminIds`             | 字符串列表 | 允许使用调试路由的 QQ 用户 OpenID                  |
+| 字段                              | 类型       | 作用                                               |
+|-----------------------------------|------------|----------------------------------------------------|
+| `sqlitePath`                      | 字符串     | SQLite 数据库路径；父目录应可写                    |
+| `directUrl`                       | 字符串     | 消息按钮的跳转服务根地址，用于谱面、玩家和房间链接 |
+| `queueMessageInGroup`             | 布尔       | 是否在群聊显示普通异步任务的“已加入队列”提示       |
+| `debugMode`                       | 布尔       | 启用 DEBUG 日志和 `/debug.*` 路由                  |
+| `watchIntervalMinutes`            | 整数       | 玩家成绩监视间隔，单位为分钟，默认 5               |
+| `multiplayerWatchIntervalSeconds` | 整数       | 多人房间监视间隔，单位为秒，默认 30                |
+| `adminIds`                        | 字符串列表 | 允许使用调试路由的 QQ 用户 OpenID                  |
 
 `debugMode` 和 `adminIds` 必须同时满足才能使用调试指令。管理员 ID 可先通过 `/inspect` 取得。
 
