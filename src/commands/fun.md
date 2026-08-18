@@ -58,12 +58,14 @@ error = |log10(猜测 Rank) - log10(实际 Rank)|
 `/mpwatch` 仅支持群聊。它会监视指定的 osu!lazer 多人房间，在每张谱面完成后向群内推送一张 oStella 结果图；房间结束后会发送提示并自动停止。
 
 ```text
-/mpwatch start <房间ID/房间链接>
+/mpwatch
+/mpwatch start [房间ID/房间链接]
 /mpwatch status
 /mpwatch stop
 ```
 
-- `start`：开始监视。启动前已经完成的谱面只作为基线，不会补发历史结果；同一群同时只监视一个房间，再次启动会替换原任务。
+- 无参：相当于 `/mpwatch start`。
+- `start`：开始监视。启动前已经完成的谱面只作为基线，不会补发历史结果；同一群同时只监视一个房间，再次启动会替换原任务。未提供参数时会尝试获取当前用户绑定的玩家所在的房间。
 - `status`：查看当前群正在监视的房间。
 - `stop`：手动停止当前群的房间监视。
 
