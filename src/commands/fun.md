@@ -55,17 +55,20 @@ error = |log10(猜测 Rank) - log10(实际 Rank)|
 
 ## `/mpwatch`：多人房间监视 {#mpwatch}
 
-`/mpwatch` 仅支持群聊。它会监视指定的 osu!lazer 多人房间，在每张谱面完成后向群内推送一张 oStella 结果图；房间结束后会发送提示并自动停止。
+`/mpwatch` 仅支持群聊。它可以监视 osu!stable 或 osu!lazer 多人房间，在每张谱面完成后向群内推送一张 oStella 结果图；房间结束后会发送提示并自动停止。
 
 ```text
 /mpwatch
-/mpwatch start [房间ID/房间链接]
+/mpwatch [start] <房间ID> [stable|lazer]
+/mpwatch [start] <房间链接>
 /mpwatch status
 /mpwatch stop
 ```
 
-- 无参：相当于 `/mpwatch start`。
-- `start`：开始监视。启动前已经完成的谱面只作为基线，不会补发历史结果；同一群同时只监视一个房间，再次启动会替换原任务。未提供参数时会尝试获取当前用户绑定的玩家所在的房间。
+- 无参：相当于 `/mpwatch start`，会尝试获取当前用户绑定的玩家所在的 lazer 房间。
+- `start`：可省略，`/mpwatch <参数>` 与 `/mpwatch start <参数>` 等价。启动前已经完成的谱面只作为基线，不会补发历史结果；同一群同时只监视一个房间，再次启动会替换原任务。
+- 房间 ID：可在 ID 后指定 `stable` 或 `lazer`；省略版本时默认为 `lazer`。
+- 房间链接：lazer 的 `/multiplayer/rooms/<ID>` 和 stable 的 `/community/matches/<ID>`（以及旧式 `/mp/<ID>`）会自动识别 ID 与版本。
 - `status`：查看当前群正在监视的房间。
 - `stop`：手动停止当前群的房间监视。
 
