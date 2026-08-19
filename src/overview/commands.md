@@ -22,6 +22,7 @@
 | [`/bp`](/commands/scores#bp) | 与 `/bo` 相同，可追加过滤条件              | 无参数查最佳成绩详情；有 n 时生成最好 n 条汇总     |
 | [`/rs`](/commands/scores#rs) | `/rs [n] [UID/用户名/@用户] [过滤条件...]` | 无参数查最近一条；有 n 时生成最近 n 条，包含失败   |
 | [`/rp`](/commands/scores#rp) | `/rp [n] [UID/用户名/@用户]`               | 无参数查最近一条通过；有 n 时生成最近 n 条通过成绩 |
+| [`/tb`](/commands/scores#tb) | `/tb [UID/用户名/@用户]`                   | 获取最近通过成绩与全部 BP 的交集及其 BP 编号       |
 | [`/s` ](/commands/scores#s)  | `/s [成绩ID/快捷查询]`                     | 获取单条成绩图；可使用最近目标                     |
 | [`/sa`](/commands/scores#sa) | `/sa [成绩ID/快捷查询]`                    | 获取成绩分析图；可使用最近目标                     |
 | [`/ma`](/commands/scores#ma) | `/ma [成绩ID/快捷查询] [n/#n]` `           | 列出 Miss 或可视化第 n 个 Miss                     |
