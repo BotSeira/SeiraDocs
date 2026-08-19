@@ -22,7 +22,7 @@
 | [`/bp`](/commands/scores#bp) | 与 `/bo` 相同，可追加过滤条件              | 无参数查最佳成绩详情；有 n 时生成最好 n 条汇总     |
 | [`/rs`](/commands/scores#rs) | `/rs [n] [UID/用户名/@用户] [过滤条件...]` | 无参数查最近一条；有 n 时生成最近 n 条，包含失败   |
 | [`/rp`](/commands/scores#rp) | `/rp [n] [UID/用户名/@用户]`               | 无参数查最近一条通过；有 n 时生成最近 n 条通过成绩 |
-| [`/tb`](/commands/scores#tb) | `/tb [UID/用户名/@用户]`                   | 获取最近通过成绩与全部 BP 的交集及其 BP 编号       |
+| [`/tb`](/commands/scores#tb) | `/tb [#N] [UID/用户名/@用户]`              | 获取近 N 天达成的 BP 及其完整 BP 编号              |
 | [`/s` ](/commands/scores#s)  | `/s [成绩ID/快捷查询]`                     | 获取单条成绩图；可使用最近目标                     |
 | [`/sa`](/commands/scores#sa) | `/sa [成绩ID/快捷查询]`                    | 获取成绩分析图；可使用最近目标                     |
 | [`/ma`](/commands/scores#ma) | `/ma [成绩ID/快捷查询] [n/#n]` `           | 列出 Miss 或可视化第 n 个 Miss                     |
@@ -36,6 +36,7 @@
 | 指令                                 | 用法                    | 作用                                          |
 |--------------------------------------|-------------------------|-----------------------------------------------|
 | [`/m`    ](/commands/beatmaps#m)     | `/m [谱面目标] [Mod]`   | 获取谱面信息；可使用最近目标                  |
+| [`/bma`  ](/commands/beatmaps#bma)   | `/bma [谱面目标] [Mod]` | 获取谱面分析                                  |
 | [`/ap`   ](/commands/beatmaps#ap)    | `/ap [谱面目标]`        | 获取谱面音频预览；可使用最近目标              |
 | [`/bpv`  ](/commands/beatmaps#bpv)   | `/bpv <谱面目标> [Mod]` | 生成约 30 秒的 autoplay 谱面游玩预览          |
 | [`/bgp`  ](/commands/beatmaps#bgp)   | `/bgp [谱面目标]`       | 获取谱面背景预览；可使用最近目标              |

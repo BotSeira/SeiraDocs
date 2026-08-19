@@ -17,6 +17,23 @@
 目标可以是谱面 ID、`mID`、成绩快捷查询、`谱面集ID#难度序号` 或 `mp`。
 Mod参数形如 `HD`、`HDDT`。无效的Mod会被忽略。
 
+## `/bma`：谱面分析 {#bma}
+
+```text
+/bma [谱面目标] [Mod]
+```
+
+生成谱面分析图。数据包含谱面 PP 构成，以及谱面分类（Stream、Alt、Aim、Flow、Tech、Reading）。
+
+```text
+/bma 123456
+/bma m123456 HDDT
+/bma rs1 HR
+/bma
+```
+
+目标解析方式与 `/m` 相同；省略目标时使用最近目标。Mod 可省略或使用 `NM`，也可组合为 `HD`、`HDDT` 等形式。
+
 ## `/ms`：谱面集信息 {#ms}
 
 ```text
