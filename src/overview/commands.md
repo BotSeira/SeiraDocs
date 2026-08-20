@@ -26,7 +26,7 @@
 | [`/s` ](/commands/scores#s)  | `/s [成绩ID/快捷查询]`                     | 获取单条成绩图；可使用最近目标                     |
 | [`/sa`](/commands/scores#sa) | `/sa [成绩ID/快捷查询]`                    | 获取成绩分析图；可使用最近目标                     |
 | [`/ma`](/commands/scores#ma) | `/ma [成绩ID/快捷查询] [n/#n]` `           | 列出 Miss 或可视化第 n 个 Miss                     |
-| [`/u` ](/commands/scores#u)  | `/u <UID/用户名/@用户>`                    | 获取玩家资料和最好成绩摘要                         |
+| [`/u` ](/commands/scores#u)  | `/u [UID/用户名/@用户]`                    | 获取玩家资料和最好成绩摘要                         |
 | [`/wx`](/commands/scores#wx) | `/wx <start/stop> [参数]`                  | 添加指定玩家的指定谱面成绩监视                     |
 
 详见[成绩查询与分析](/commands/scores)。
