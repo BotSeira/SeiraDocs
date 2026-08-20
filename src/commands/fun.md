@@ -63,13 +63,16 @@ error = |log10(猜测 Rank) - log10(实际 Rank)|
 /mpwatch [start] <房间链接>
 /mpwatch status
 /mpwatch stop
+/mpwatch stop all
 ```
 
 - 无参：相当于 `/mpwatch start`，会尝试获取当前用户绑定的玩家所在的 lazer 房间。
-- `start`：可省略，`/mpwatch <参数>` 与 `/mpwatch start <参数>` 等价。启动前已经完成的谱面只作为基线，不会补发历史结果；同一群同时只监视一个房间，再次启动会替换原任务。
+- `start`：可省略，`/mpwatch <参数>` 与 `/mpwatch start <参数>` 等价。
+启动前已经完成的谱面不会补发；每名用户在同一群中可以启动一个监视，再次启动只会替换自己的任务。
+同一房间在同一群中只能由一名用户监视，但不同群互不影响。
 - 房间 ID：可在 ID 后指定 `stable` 或 `lazer`；省略版本时默认为 `lazer`。
 - 房间链接：lazer 的 `/multiplayer/rooms/<ID>` 和 stable 的 `/community/matches/<ID>`（以及旧式 `/mp/<ID>`）会自动识别 ID 与版本。
-- `status`：查看当前群正在监视的房间。
-- `stop`：手动停止当前群的房间监视。
+- `status`：查看自己在当前群启动的房间监视。
+- `stop`：停止自己在当前群启动的房间监视；`stop all` 会停止当前群的全部房间监视。
 
 结果图包含本轮谱面信息、加谱玩家，以及每位玩家选择的难度、MOD、ACC、combo、分数、PP、名次和评价等级。多人监视依赖机器人的群主动消息权限。
