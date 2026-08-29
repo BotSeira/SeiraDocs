@@ -1,5 +1,11 @@
 # 常见问题
 
+如果在使用过程中遇到了问题，或者有新功能/改进建议，
+可以在 [GitHub 仓库](https://github.com/BotSeira/SeiraCore) 中提交 Issue 和 PR，
+也可以加入~~闲聊吹水~~ QQ 群与群主对线：[905832095](https://qm.qq.com/cgi-bin/qm/qr?k=2u4UsEFsZvxK6dREc0truRihiueLrR4j&jump_from=webapi&authKey=D/P+KSGmk+1kNjtU8gVcXJ0IsdztPSDN6tBNFWlw8iPynlTzDSicT1w2n0/D7qh9)。
+
+以下是一些常见的问题，及其对应的（可能的）解决方案。
+
 ### 为什么群聊中发送指令没有反应
 
 机器人在默认权限下只能接收到群聊中@机器人的消息，所以在群聊中使用需要在开头加上@机器人的操作。
