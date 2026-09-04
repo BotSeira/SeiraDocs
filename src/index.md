@@ -26,12 +26,13 @@ features:
   - icon: 🗺️
     title: 谱面与搜索
     details: 查看谱面和谱面集、试听音频、预览背景、搜索谱面集并取得镜像下载入口。
-  - icon: 📊
-    title: 群体功能
-    details: 查看群成员表现分排行、指定谱面的群排行、好友关系和多人房间。
+  - icon: 🎮
+    title: 娱乐功能
+    details: 游玩猜Rank游戏、查看排行榜等、实时跟踪群友成绩。
   - icon: 🎬
     title: 回放工具
     details: 自动截取高光、按时间段渲染单人回放，以及生成群友同屏回放视频。
 ---
 
-Seira 依赖 [oStella](https://github.com/BotSeira/oStella) 提供 osu! 数据与渲染服务。文档适用于 SeiraCore `1.11.3` 版本，更新可能会有延后~
+Seira 依赖 [oStella](https://github.com/BotSeira/oStella) 提供 osu! 数据与渲染服务。
+文档适用于 SeiraCore `1.11.6` 版本，更新可能会有延后~
