@@ -35,4 +35,4 @@ features:
 ---
 
 Seira 依赖 [oStella](https://github.com/BotSeira/oStella) 提供 osu! 数据与渲染服务。
-文档适用于 SeiraCore `1.11.6` 版本，更新可能会有延后~
+文档适用于 SeiraCore `1.11.7` 版本，更新可能会有延后~
