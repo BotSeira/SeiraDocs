@@ -33,18 +33,18 @@
 
 ## 谱面与谱面集
 
-| 指令                                 | 用法                    | 作用                                          |
-|--------------------------------------|-------------------------|-----------------------------------------------|
-| [`/m`    ](/commands/beatmaps#m)     | `/m [谱面目标] [Mod]`   | 获取谱面信息；可使用最近目标                  |
-| [`/bma`  ](/commands/beatmaps#bma)   | `/bma [谱面目标] [Mod]` | 获取谱面分析                                  |
-| [`/ap`   ](/commands/beatmaps#ap)    | `/ap [谱面目标]`        | 获取谱面音频预览；可使用最近目标              |
-| [`/bpv`  ](/commands/beatmaps#bpv)   | `/bpv <谱面目标> [Mod]` | 生成约 30 秒的 autoplay 谱面游玩预览          |
-| [`/bgp`  ](/commands/beatmaps#bgp)   | `/bgp [谱面目标]`       | 获取谱面背景预览；可使用最近目标              |
-| [`/ms`   ](/commands/beatmaps#ms)    | `/ms [谱面集目标]`      | 获取谱面集信息；可使用最近目标                |
-| [`/dl`   ](/commands/beatmaps#dl)    | `/dl [谱面集目标]`      | 获取谱面集镜像下载入口；可使用最近目标或 `mp` |
-| [`/sms`  ](/commands/beatmaps#sms)   | `/sms [#页数] <关键字>` | 搜索谱面集                                    |
-| [`/daily`](/commands/beatmaps#daily) | `/daily`                | 获取 osu! 每日挑战信息                        |
-| [`/luck` ](/commands/beatmaps#luck)  | `/luck`                 | 获取当天固定的“今日人品”和推荐谱面集          |
+| 指令                                 | 用法                    | 作用                                 |
+|--------------------------------------|-------------------------|--------------------------------------|
+| [`/m`    ](/commands/beatmaps#m)     | `/m [谱面目标] [Mod]`   | 获取谱面信息                         |
+| [`/bma`  ](/commands/beatmaps#bma)   | `/bma [谱面目标] [Mod]` | 获取谱面分析                         |
+| [`/ap`   ](/commands/beatmaps#ap)    | `/ap [谱面目标]`        | 获取谱面音频预览                     |
+| [`/bpv`  ](/commands/beatmaps#bpv)   | `/bpv <谱面目标> [Mod]` | 生成约 30 秒的 autoplay 谱面游玩预览 |
+| [`/bgp`  ](/commands/beatmaps#bgp)   | `/bgp [谱面目标]`       | 获取谱面背景预览                     |
+| [`/ms`   ](/commands/beatmaps#ms)    | `/ms [谱面集目标]`      | 获取谱面集信息                       |
+| [`/dl`   ](/commands/beatmaps#dl)    | `/dl [谱面集目标]`      | 获取谱面集镜像下载入口；可使用 `mp`  |
+| [`/sms`  ](/commands/beatmaps#sms)   | `/sms [#页数] <关键字>` | 搜索谱面集                           |
+| [`/daily`](/commands/beatmaps#daily) | `/daily`                | 获取 osu! 每日挑战信息               |
+| [`/luck` ](/commands/beatmaps#luck)  | `/luck`                 | 获取当天固定的“今日人品”和推荐谱面集 |
 
 详见[谱面与谱面集](/commands/beatmaps)。
 
