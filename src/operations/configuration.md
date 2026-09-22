@@ -64,11 +64,14 @@ cos:
 
 ## `ostella`
 
-| 字段       | 类型   | 作用                                           |
-|------------|--------|------------------------------------------------|
-| `endpoint` | 字符串 | oStella API 根地址，不要在末尾附加具体接口路径 |
+| 字段       | 类型         | 作用                                                   |
+|------------|--------------|--------------------------------------------------------|
+| `endpoint` | 字符串       | oStella API 根地址，不要在末尾附加具体接口路径         |
+| `token`    | 字符串，可选 | 调用 oStella 的 Bearer 服务令牌，需与 oStella 配置一致 |
 
 默认示例为 `http://localhost:8721`。Seira 启动不一定会立即验证全部接口，建议通过 `/stat`、`/rs` 和 `/m` 做完整检查。
+
+Seira 使用 `Authorization: Bearer <token>` 调用 oStella。需要代表目标 osu! 玩家访问 `/users/me`、好友或多人房间接口时，玩家令牌会单独放在 `X-Osu-Authorization: Bearer <osuAccessToken>`，不会覆盖服务令牌。
 
 ## `qq`
 
