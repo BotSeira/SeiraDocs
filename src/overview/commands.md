@@ -69,6 +69,7 @@
 | [`/mpwatch`](/commands/fun#mpwatch) | `/mpwatch <start/status/stop> [房间/all]` | 按群成员推送多人房间逐图结果并在结束时停止 | 仅群聊 |
 | [`/romai`](/commands/fun#romai)     | `/romai [目标]`                           | 开始监视自己或目标正在进行的RomAI比赛      | 仅群聊 |
 | [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                     | -      |
+| [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态              | -      |
 
 详见[交互与娱乐](/commands/fun)。
 
