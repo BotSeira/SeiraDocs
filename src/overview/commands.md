@@ -28,6 +28,8 @@
 | [`/sa`](/commands/scores#sa)   | `/sa [成绩ID/快捷查询]`                        | 获取成绩分析图；可使用最近目标                       |
 | [`/ma`](/commands/scores#ma)   | `/ma [成绩ID/快捷查询] [n/#n]` `               | 列出 Miss 或可视化第 n 个 Miss                       |
 | [`/u` ](/commands/scores#u)    | `/u [UID/用户名/@用户]`                        | 获取玩家资料和最好成绩摘要                           |
+| [`/ux` ](/commands/scores#ux)  | `/ux [UID/用户名/@用户]`                       | 获取玩家基本数据（文字版）                           |
+| [`/@` ](/commands/scores#ux)   | `/@` 或 `/@用户`                               | 相当于 `/ux [@用户]`                                 |
 | [`/rbp`](/commands/scores#rbp) | `/rbp [UID/用户名/@用户]`                      | 获取随机BP                                           |
 | [`/wx`](/commands/scores#wx)   | `/wx <start/stop> [参数]`                      | 添加指定玩家的指定谱面成绩监视                       |
 
