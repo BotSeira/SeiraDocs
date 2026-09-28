@@ -2,7 +2,7 @@
 
 如果在使用过程中遇到了问题，或者有新功能/改进建议，
 可以在 [GitHub 仓库](https://github.com/BotSeira/SeiraCore) 中提交 Issue 和 PR，
-也可以加入~~闲聊吹水~~ QQ 群与群主对线：[905832095](https://qm.qq.com/cgi-bin/qm/qr?k=2u4UsEFsZvxK6dREc0truRihiueLrR4j&jump_from=webapi&authKey=D/P+KSGmk+1kNjtU8gVcXJ0IsdztPSDN6tBNFWlw8iPynlTzDSicT1w2n0/D7qh9)。
+也可以加入 [QQ 频道](https://pd.qq.com/s/9cqi0fokv?b=5) 反馈交流~
 
 以下是一些常见的问题，及其对应的（可能的）解决方案。
 

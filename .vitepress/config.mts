@@ -82,7 +82,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/BotSeira' },
-      { icon: 'qq', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=2u4UsEFsZvxK6dREc0truRihiueLrR4j&jump_from=webapi&authKey=D/P+KSGmk+1kNjtU8gVcXJ0IsdztPSDN6tBNFWlw8iPynlTzDSicT1w2n0/D7qh9' }
+      { icon: 'qq', link: 'https://pd.qq.com/s/9cqi0fokv?b=5' }
     ],
 
     footer: {
