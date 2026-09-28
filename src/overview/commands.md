@@ -83,6 +83,7 @@
 | [`/stat`   ](/commands/general#stat)    | `/stat`    | 显示 Seira、oStella、osu! 状态及运行统计 |
 | [`/inspect`](/commands/general#inspect) | `/inspect` | 显示当前用户、群组和消息 ID              |
 | [`/help`   ](/commands/general#help)    | `/help`    | 显示机器人内置简要帮助                   |
+| [`/usages` ](/commands/general#usages)  | `/usages`  | 显示机器人内置简要指令用法示例           |
 | [`/faq`    ](/commands/general#faq)     | `/faq`     | 显示常见问题                             |
 
 详见[状态与帮助](/commands/general)。
