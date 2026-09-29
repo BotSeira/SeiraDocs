@@ -72,6 +72,7 @@
 | [`/romai`](/commands/fun#romai)     | `/romai [目标]`                           | 开始监视自己或目标正在进行的RomAI比赛      | 仅群聊 |
 | [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                     | -      |
 | [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态              | -      |
+| [`/ai`](/commands/fun#ai)           | `/ai [on/off/reset/reset all]`            | 控制 AI 对话功能                           | -      |
 
 详见[交互与娱乐](/commands/fun)。
 
