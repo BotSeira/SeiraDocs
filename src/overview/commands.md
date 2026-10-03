@@ -28,6 +28,7 @@
 | [`/sa`](/commands/scores#sa)   | `/sa [成绩ID/快捷查询]`                        | 获取成绩分析图；可使用最近目标                       |
 | [`/ma`](/commands/scores#ma)   | `/ma [成绩ID/快捷查询] [n/#n]` `               | 列出 Miss 或可视化第 n 个 Miss                       |
 | [`/u` ](/commands/scores#u)    | `/u [UID/用户名/@用户]`                        | 获取玩家资料和最好成绩摘要                           |
+| [`/addpp`](/commands/addpp#addpp) | `/addpp 200*4` 或 `/addpp m谱面ID 条件...` | 估算新增成绩后的总 PP、全球排名及变化 |
 | [`/ux` ](/commands/scores#ux)  | `/ux [UID/用户名/@用户]`                       | 获取玩家基本数据（文字版）                           |
 | [`/@` ](/commands/scores#ux)   | `/@` 或 `/@用户`                               | 相当于 `/ux [@用户]`                                 |
 | [`/rbp`](/commands/scores#rbp) | `/rbp [UID/用户名/@用户]`                      | 获取随机BP                                           |
@@ -57,6 +58,7 @@
 | 指令                                    | 用法                                | 作用                             | 备注                       |
 |-----------------------------------------|-------------------------------------|----------------------------------|----------------------------|
 | [`/r`    ](/commands/replays#r)         | `/r [成绩目标] [[开始]-[结束]]`     | 渲染高光、片段或完整回放         | 省略目标时使用最近目标     |
+| [`/snap`](/commands/replays#snap)      | `/snap [成绩目标] <时间/objN/#N> [±偏移ms]` | 生成完整游玩画面的回放快照 | 别名 `/snapshot`；可沿用最近目标 |
 | [`/rsc`  ](/commands/replays#rsc)       | `/rsc [谱面目标] [+ID列表/=ID列表]` | 生成多人同屏回放                 | 仅群聊                     |
 | [`/rstat`](/commands/replays#rstat)     | `/rstat [任务ID]`                   | 查询渲染状态或重新取得已完成视频 | 省略 ID 时查自己的最近任务 |
 | [`/rcancel`](/commands/replays#rcancel) | `/rcancel <任务ID>`                 | 取消排队中或正在运行的回放渲染   | 需要完整任务 ID            |
@@ -64,15 +66,16 @@
 详见[回放与视频](/commands/replays)。
 
 ## 交互与娱乐
-| 指令                                | 用法                                      | 作用                                       | 备注   |
-|-------------------------------------|-------------------------------------------|--------------------------------------------|--------|
-| [`/rg`     ](/commands/fun#rg)      | `/rg <start/#Rank/end>`                   | 开始、参与或结束猜 Rank 游戏               | 仅群聊 |
-| [`/watch`  ](/commands/fun#watch)   | `/watch <add/del/list> [目标]`            | 开始/移除/列出当前群中的成绩监视           | 仅群聊 |
-| [`/mpwatch`](/commands/fun#mpwatch) | `/mpwatch <start/status/stop> [房间/all]` | 按群成员推送多人房间逐图结果并在结束时停止 | 仅群聊 |
-| [`/romai`](/commands/fun#romai)     | `/romai [目标]`                           | 开始监视自己或目标正在进行的RomAI比赛      | 仅群聊 |
-| [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                     | -      |
-| [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态              | -      |
-| [`/ai`](/commands/fun#ai)           | `/ai [on/off/reset/reset all]`            | 控制 AI 对话功能                           | -      |
+| 指令                                | 用法                                      | 作用                                                   | 备注   |
+|-------------------------------------|-------------------------------------------|--------------------------------------------------------|--------|
+| [`/rg`     ](/commands/fun#rg)      | `/rg <start/#Rank/end>`                   | 开始、参与或结束猜 Rank 游戏                           | 仅群聊 |
+| [`/watch`  ](/commands/fun#watch)   | `/watch <add/del/list> [目标]`            | 开始/移除/列出当前群中的成绩监视                       | 仅群聊 |
+| [`/gch`](/commands/gch)             | `/gch configure` → `/gch start`           | 配置并开始指定/随机谱面的群挑战，可选择难度和 Mod 规则 | 仅群聊 |
+| [`/mpwatch`](/commands/fun#mpwatch) | `/mpwatch <start/status/stop> [房间/all]` | 按群成员推送多人房间逐图结果并在结束时停止             | 仅群聊 |
+| [`/romai`](/commands/fun#romai)     | `/romai [目标]`                           | 开始监视自己或目标正在进行的RomAI比赛                  | 仅群聊 |
+| [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                                 | -      |
+| [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态                          | -      |
+| [`/ai`](/commands/fun#ai)           | `/ai [on/off/reset/reset all]`            | 控制 AI 对话功能                                       | -      |
 
 详见[交互与娱乐](/commands/fun)。
 
@@ -82,6 +85,7 @@
 | 指令                                    | 用法       | 作用                                     |
 |-----------------------------------------|------------|------------------------------------------|
 | [`/stat`   ](/commands/general#stat)    | `/stat`    | 显示 Seira、oStella、osu! 状态及运行统计 |
+| [`/whatif`](/commands/general#whatif) | `/whatif <总PPpp 或 #排名>` | 估算总 PP 与全球排名；纯数字默认按排名解析 |
 | [`/inspect`](/commands/general#inspect) | `/inspect` | 显示当前用户、群组和消息 ID              |
 | [`/help`   ](/commands/general#help)    | `/help`    | 显示机器人内置简要帮助                   |
 | [`/usages` ](/commands/general#usages)  | `/usages`  | 显示机器人内置简要指令用法示例           |

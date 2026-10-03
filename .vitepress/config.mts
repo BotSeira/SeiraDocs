@@ -63,9 +63,11 @@ export default defineConfig({
         items: [
           { text: '绑定、好友与排行', link: '/commands/account-social' },
           { text: '成绩查询与分析', link: '/commands/scores' },
+          { text: '新增 PP 估算', link: '/commands/addpp' },
           { text: '谱面与谱面集', link: '/commands/beatmaps' },
           { text: '回放与视频', link: '/commands/replays' },
           { text: '交互与娱乐', link: '/commands/fun' },
+          { text: '群挑战', link: '/commands/challenges' },
           { text: '状态与帮助', link: '/commands/general' },
           { text: '其它指令', link: '/commands/misc' }
         ]

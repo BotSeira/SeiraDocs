@@ -45,7 +45,7 @@ cos:
 | `directUrl`                       | 字符串     | 消息按钮的跳转服务根地址，用于谱面、玩家和房间链接 |
 | `queueMessageInGroup`             | 布尔       | 是否在群聊显示普通异步任务的“已加入队列”提示       |
 | `debugMode`                       | 布尔       | 启用 DEBUG 日志和 `/debug.*` 路由                  |
-| `watchIntervalMinutes`            | 整数       | 玩家成绩监视间隔，单位为分钟，默认 5               |
+| `watchIntervalMinutes`            | 整数       | 玩家成绩监视与群挑战共用的轮询间隔，分钟，默认 5    |
 | `multiplayerWatchIntervalSeconds` | 整数       | 多人房间监视间隔，单位为秒，默认 30                |
 | `adminIds`                        | 字符串列表 | 允许使用调试路由的 QQ 用户 OpenID                  |
 
