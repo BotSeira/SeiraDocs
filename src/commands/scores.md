@@ -42,7 +42,7 @@
 /bp 10 acc>=98 combo>=1000
 /bp 8 peppy mod~HD mod!~DT pp>=300
 /rs 12 time<2:30 rank!=F
-/rp 20 title~"Song Name" mapper!=peppy video=true
+/rp 20 title="Song Name" mapper!~peppy video=true
 ```
 
 `<数量>` 表示先获取多少条原始成绩，再在这些成绩上应用过滤；`<范围>`（如 `21-30`）则只展示该范围内的原始成绩，序号仍与普通查询一致。过滤条件会在所选范围内应用，因此过滤后的实际展示数量可能更少。终点超过 100 时，系统会继续获取第 101–200 条后再统一处理。支持的字段和写法如下：
@@ -56,23 +56,31 @@
 | `pp`                      | PP                          | 数值运算符                                           | `pp>300`                              |
 | `time` / `length` / `len` | 原谱面总时长                | 数值运算符                                           | `time<150`、`time<2:30`、`time<2m30s` |
 | `star` / `sr`             | 星数                        | 数值运算符                                           | `star>=6.5`                           |
+| `cs` `ar` `od` `hp`       | 各种属性                    | 数值运算符                                           | `cs>=7`                               |
 | `bpm`                     | BPM                         | 数值运算符                                           | `bpm>180`                             |
 | `miss`                    | Miss 数                     | 数值运算符                                           | `miss=0`                              |
 | `score`                   | 总分                        | 数值运算符                                           | `score>=1000000`                      |
+| `ur`                      | 不稳定率                    | 数值运算符                                           | `ur>=100`                             |
 | `rank`                    | 成绩评级                    | `>` `>=` `<` `<=` `=` `!=`                           | `rank>=S`                             |
 | `mod` / `mods`            | Mod 集合                    | `~` 包含、`!~` 不包含、`=` 完全等于、`!=` 不完全等于 | `mod~HD`、`mod=HDDT`、`mod=NM`        |
+| `replay`                  | 回放是否可用                | `=` `!=`，值为 `true` / `false`                      | `replay=true`                         |
 | `any`                     | 全部谱面文本元数据          | `=` 包含、`!=` 不包含                                | `any=stream`                          |
-| `title`                   | 歌曲标题（含 Unicode 标题） | `~` `!~` `=` `!=`                                    | `title~"Big Black"`                   |
+| `title`                   | 歌曲标题（含 Unicode 标题） | `~` `!~` `=` `!=`                                    | `title="Big Black"`                   |
 | `artist`                  | 艺术家（含 Unicode 名称）   | `~` `!~` `=` `!=`                                    | `artist="xi"`                         |
 | `mapper`                  | 谱师                        | `~` `!~` `=` `!=`                                    | `mapper!=peppy`                       |
 | `genre`                   | 曲风                        | `~` `!~` `=` `!=`                                    | `genre~Rock`                          |
 | `language`                | 语言                        | `~` `!~` `=` `!=`                                    | `language=English`                    |
+| `source`                  | 来源                        | `~` `!~` `=` `!=`                                    | `source=Steam`                        |
+| `tag`                     | 标签                        | `~` `!~` `=` `!=`                                    | `tag~osu`                             |
+| `type`                    | 谱面类型                    | `~` `!~` `=` `!=`                                    | `type=stream`                         |
 | `video`                   | 是否包含视频                | `=` `!=`，值为 `true` / `false`                      | `video=true`                          |
 | `storyboard`              | 是否包含 Storyboard         | `=` `!=`，值为 `true` / `false`                      | `storyboard=false`                    |
+| `nsfw`                    | 是否被标记 NSFW             | `=` `!=`，值为 `true` / `false`                      | `nsfw=false`                          |
 | `fullcombo`               | 是否 Full Combo             | `=` `!=`，值为 `true` / `false`                      | `fullcombo=true`                      |
 
 运算符只支持表格中的符号写法。
-过滤值包含空格时，需要用双引号，例如 `title~"The Big Black"`；
+普通文本条件中，`=` 表示包含，`!=` 表示不包含，`~` 表示完全等于，`!~` 表示不等于，匹配不区分大小写。例如 `title="Big Black"` 可匹配 `The Big Black`，`title~"Big Black"` 只匹配完整标题 `Big Black`。`any` 仍仅支持 `=` 和 `!=`；Mod、数值、评级和布尔条件沿用表格中的运算符含义。
+过滤值包含空格时，需要用双引号，例如 `title="The Big Black"`；
 双引号不会成为匹配内容的一部分。
 
 `rank` 的比较顺序为 `XH = SSH > X = SS > SH > S > A > B > C > D > F`。例如，`rank>=S` 会匹配 S、SH、SS/X、SSH/XH。
@@ -155,6 +163,8 @@
 
 也可以直接发送 `/rs5`、`/rp2`、`/bo3`，解析器会把这种完整快捷指令路由到 `/s`。
 
+`/s`、`/sa`、`/ma` 也支持 `[@用户] m谱面ID` 作为成绩目标，省略玩家时使用自己。例如 `/sa @某人 m123456`、`/ma m123456 #2`。玩家可使用 UID、用户名或 @用户；详见[按玩家和谱面选择成绩](/guide/targets#按玩家和谱面选择成绩)。
+
 ## `/sa`：成绩分析 {#sa}
 
 ```text
@@ -171,6 +181,10 @@
 ## `/ma`：Miss 分析 {#ma}
 
 `/ma` 可以先列出 Miss，也可以可视化指定的某一次 Miss。
+
+列表将会断连击的 slider tick 漏接（含折返）也计入 Miss，并按发生时间统一编号；同一滑条的多次断条分别编号，类型标注为“断条”。不会断连击的 slider end 漏接不列入、不编号。此编号用于分析，不改变成绩本身的 Miss 数。
+
+断条图片展示整条滑条的全部 tick、从开始到结束的光标轨迹，以及目标 tick 的判定位置和光标位置。实线内圈表示重新获取跟随所需的范围，虚线外圈表示保持跟随的范围；丢失跟随后，需要按住按键并回到内圈。下方显示简洁的光标到滑条球的距离曲线（像素），红点标出目标 tick，横线表示重新获取与保持跟随的距离范围；底部根据实际距离与按键状态区分超出范围、松键等情况，图片不附图例。只标注目标 tick 的滑条内序号，顶部 `#` 编号仍与 Miss 列表一致。
 
 ### 列出 Miss
 

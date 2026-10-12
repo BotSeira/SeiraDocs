@@ -18,21 +18,21 @@
 
 ## 成绩与玩家
 
-| 指令                           | 用法                                           | 作用                                                 |
-|--------------------------------|------------------------------------------------|------------------------------------------------------|
-| [`/bp`](/commands/scores#bp)   | `/bp [n/a-b] [UID/用户名/@用户] [过滤条件...]` | 无参数查最佳成绩详情；支持数量或 `a-b` 范围汇总      |
-| [`/rs`](/commands/scores#rs)   | `/rs [n/a-b] [UID/用户名/@用户] [过滤条件...]` | 无参数查最近一条；支持数量或范围汇总，包含失败       |
-| [`/rp`](/commands/scores#rp)   | `/rp [n/a-b] [UID/用户名/@用户]`               | 无参数查最近一条通过；支持数量或范围汇总最近通过成绩 |
-| [`/tb`](/commands/scores#tb)   | `/tb [#N] [UID/用户名/@用户]`                  | 获取近 N 天达成的 BP 及其完整 BP 编号                |
-| [`/s` ](/commands/scores#s)    | `/s [成绩ID/快捷查询]`                         | 获取单条成绩图；可使用最近目标                       |
-| [`/sa`](/commands/scores#sa)   | `/sa [成绩ID/快捷查询]`                        | 获取成绩分析图；可使用最近目标                       |
-| [`/ma`](/commands/scores#ma)   | `/ma [成绩ID/快捷查询] [n/#n]` `               | 列出 Miss 或可视化第 n 个 Miss                       |
-| [`/u` ](/commands/scores#u)    | `/u [UID/用户名/@用户]`                        | 获取玩家资料和最好成绩摘要                           |
-| [`/addpp`](/commands/addpp#addpp) | `/addpp 200*4` 或 `/addpp m谱面ID 条件...` | 估算新增成绩后的总 PP、全球排名及变化 |
-| [`/ux` ](/commands/scores#ux)  | `/ux [UID/用户名/@用户]`                       | 获取玩家基本数据（文字版）                           |
-| [`/@` ](/commands/scores#ux)   | `/@` 或 `/@用户`                               | 相当于 `/ux [@用户]`                                 |
-| [`/rbp`](/commands/scores#rbp) | `/rbp [UID/用户名/@用户]`                      | 获取随机BP                                           |
-| [`/wx`](/commands/scores#wx)   | `/wx <start/stop> [参数]`                      | 添加指定玩家的指定谱面成绩监视                       |
+| 指令                              | 用法                                                                | 作用                                                                                 |
+|-----------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| [`/bp`](/commands/scores#bp)      | `/bp [n/a-b] [UID/用户名/@用户] [过滤条件...]`                      | 无参数查最佳成绩详情；支持数量或 `a-b` 范围汇总                                      |
+| [`/rs`](/commands/scores#rs)      | `/rs [n/a-b] [UID/用户名/@用户] [过滤条件...]`                      | 无参数查最近一条；支持数量或范围汇总，包含失败                                       |
+| [`/rp`](/commands/scores#rp)      | `/rp [n/a-b] [UID/用户名/@用户]`                                    | 无参数查最近一条通过；支持数量或范围汇总最近通过成绩                                 |
+| [`/tb`](/commands/scores#tb)      | `/tb [#N] [UID/用户名/@用户]`                                       | 获取近 N 天达成的 BP 及其完整 BP 编号                                                |
+| [`/s` ](/commands/scores#s)       | `/s [成绩ID/快捷查询]`                                              | 获取单条成绩图；可使用最近目标                                                       |
+| [`/sa`](/commands/scores#sa)      | `/sa [成绩ID/快捷查询]`                                             | 获取成绩分析图；可使用最近目标                                                       |
+| [`/ma`](/commands/scores#ma)      | `/ma [成绩ID/快捷查询] [n/#n]` `                                    | 列出 Miss 或可视化第 n 个 Miss                                                       |
+| [`/u` ](/commands/scores#u)       | `/u [UID/用户名/@用户]`                                             | 获取玩家资料和最好成绩摘要                                                           |
+| [`/addpp`](/commands/addpp#addpp) | `/addpp [user] X*Y` 或 `/addpp [user] m谱面ID或rs/bp/rp[N] 条件...` | 估算新增成绩后的总 PP、全球排名及变化；可在成绩参数前加 UID、用户名或 @用户 指定目标 |
+| [`/ux` ](/commands/scores#ux)     | `/ux [UID/用户名/@用户]`                                            | 获取玩家基本数据（文字版）                                                           |
+| [`/@` ](/commands/scores#ux)      | `/@` 或 `/@用户`                                                    | 相当于 `/ux [@用户]`                                                                 |
+| [`/rbp`](/commands/scores#rbp)    | `/rbp [UID/用户名/@用户]`                                           | 获取随机BP                                                                           |
+| [`/wx`](/commands/scores#wx)      | `/wx <start/stop> [参数]`                                           | 添加指定玩家的指定谱面成绩监视                                                       |
 
 详见[成绩查询与分析](/commands/scores)。
 
@@ -55,13 +55,13 @@
 
 ## 回放与视频
 
-| 指令                                    | 用法                                | 作用                             | 备注                       |
-|-----------------------------------------|-------------------------------------|----------------------------------|----------------------------|
-| [`/r`    ](/commands/replays#r)         | `/r [成绩目标] [[开始]-[结束]]`     | 渲染高光、片段或完整回放         | 省略目标时使用最近目标     |
-| [`/snap`](/commands/replays#snap)      | `/snap [成绩目标] <时间/objN/#N> [±偏移ms]` | 生成完整游玩画面的回放快照 | 别名 `/snapshot`；可沿用最近目标 |
-| [`/rsc`  ](/commands/replays#rsc)       | `/rsc [谱面目标] [+ID列表/=ID列表]` | 生成多人同屏回放                 | 仅群聊                     |
-| [`/rstat`](/commands/replays#rstat)     | `/rstat [任务ID]`                   | 查询渲染状态或重新取得已完成视频 | 省略 ID 时查自己的最近任务 |
-| [`/rcancel`](/commands/replays#rcancel) | `/rcancel <任务ID>`                 | 取消排队中或正在运行的回放渲染   | 需要完整任务 ID            |
+| 指令                                    | 用法                                        | 作用                             | 备注                             |
+|-----------------------------------------|---------------------------------------------|----------------------------------|----------------------------------|
+| [`/r`    ](/commands/replays#r)         | `/r [成绩目标] [[开始]-[结束]]`             | 渲染高光、片段或完整回放         | 省略目标时使用最近目标           |
+| [`/snap`](/commands/replays#snap)       | `/snap [成绩目标] <时间/objN/#N> [±偏移ms]` | 生成完整游玩画面的回放快照       | 别名 `/snapshot`；可沿用最近目标 |
+| [`/rsc`  ](/commands/replays#rsc)       | `/rsc [谱面目标] [+ID列表/=ID列表]`         | 生成多人同屏回放                 | 仅群聊                           |
+| [`/rstat`](/commands/replays#rstat)     | `/rstat [任务ID]`                           | 查询渲染状态或重新取得已完成视频 | 省略 ID 时查自己的最近任务       |
+| [`/rcancel`](/commands/replays#rcancel) | `/rcancel <任务ID>`                         | 取消排队中或正在运行的回放渲染   | 需要完整任务 ID                  |
 
 详见[回放与视频](/commands/replays)。
 
@@ -82,14 +82,14 @@
 
 ## 状态与帮助
 
-| 指令                                    | 用法       | 作用                                     |
-|-----------------------------------------|------------|------------------------------------------|
-| [`/stat`   ](/commands/general#stat)    | `/stat`    | 显示 Seira、oStella、osu! 状态及运行统计 |
-| [`/whatif`](/commands/general#whatif) | `/whatif <总PPpp 或 #排名>` | 估算总 PP 与全球排名；纯数字默认按排名解析 |
-| [`/inspect`](/commands/general#inspect) | `/inspect` | 显示当前用户、群组和消息 ID              |
-| [`/help`   ](/commands/general#help)    | `/help`    | 显示机器人内置简要帮助                   |
-| [`/usages` ](/commands/general#usages)  | `/usages`  | 显示机器人内置简要指令用法示例           |
-| [`/faq`    ](/commands/general#faq)     | `/faq`     | 显示常见问题                             |
+| 指令                                    | 用法                        | 作用                                       |
+|-----------------------------------------|-----------------------------|--------------------------------------------|
+| [`/stat`   ](/commands/general#stat)    | `/stat`                     | 显示 Seira、oStella、osu! 状态及运行统计   |
+| [`/whatif`](/commands/general#whatif)   | `/whatif <总PPpp 或 #排名>` | 估算总 PP 与全球排名；纯数字默认按排名解析 |
+| [`/inspect`](/commands/general#inspect) | `/inspect`                  | 显示当前用户、群组和消息 ID                |
+| [`/help`   ](/commands/general#help)    | `/help`                     | 显示机器人内置简要帮助                     |
+| [`/usages` ](/commands/general#usages)  | `/usages`                   | 显示机器人内置简要指令用法示例             |
+| [`/faq`    ](/commands/general#faq)     | `/faq`                      | 显示常见问题                               |
 
 详见[状态与帮助](/commands/general)。
 
