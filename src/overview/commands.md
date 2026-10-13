@@ -62,6 +62,7 @@
 | [`/rsc`  ](/commands/replays#rsc)       | `/rsc [谱面目标] [+ID列表/=ID列表]`         | 生成多人同屏回放                 | 仅群聊                           |
 | [`/rstat`](/commands/replays#rstat)     | `/rstat [任务ID]`                           | 查询渲染状态或重新取得已完成视频 | 省略 ID 时查自己的最近任务       |
 | [`/rcancel`](/commands/replays#rcancel) | `/rcancel <任务ID>`                         | 取消排队中或正在运行的回放渲染   | 需要完整任务 ID                  |
+| [`/rget`](/commands/replays#rget)       | `/rget <任务ID>`                            | 获取已完成的回放视频             | 需要完整任务 ID                  |
 
 详见[回放与视频](/commands/replays)。
 
@@ -76,6 +77,8 @@
 | [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                                 | -      |
 | [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态                          | -      |
 | [`/ai`](/commands/fun#ai)           | `/ai [on/off/reset/reset all]`            | 控制 AI 对话功能                                       | -      |
+| [`/ncm`](/commands/fun#ncm)         | `/ncm <目标>`                             | 在网易云音乐搜索指定谱的音乐                           | -      |
+| [`/ncmp`](/commands/fun#ncmp)       | `/ncmp <歌单ID> [A-B]`                    | 在谱面库中搜索指定网易云音乐歌单的音乐                 | -      |
 
 详见[交互与娱乐](/commands/fun)。
 
