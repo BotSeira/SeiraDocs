@@ -68,6 +68,7 @@
 详见[回放与视频](/commands/replays)。
 
 ## 交互与娱乐
+
 | 指令                                | 用法                                      | 作用                                                   | 备注   |
 |-------------------------------------|-------------------------------------------|--------------------------------------------------------|--------|
 | [`/rg`     ](/commands/fun#rg)      | `/rg <start/#Rank/end>`                   | 开始、参与或结束猜 Rank 游戏                           | 仅群聊 |
@@ -77,6 +78,7 @@
 | [`/romai`](/commands/fun#romai)     | `/romai [目标]`                           | 开始监视自己或目标正在进行的RomAI比赛                  | 仅群聊 |
 | [`/roll`](/commands/fun#roll)       | `/roll [dice]`                            | 掷骰子                                                 | -      |
 | [`/mc`](/commands/fun#mc)           | `/mc [地址]`                              | 获取指定 Minecraft 服务器状态                          | -      |
+| [`/mcbind`](/commands/fun#mcbind)   | `/mcbind`                                 | 开启 MC 服务器消息同步                                 | -      |
 | [`/ai`](/commands/fun#ai)           | `/ai [on/off/reset/reset all]`            | 控制 AI 对话功能                                       | -      |
 | [`/ncm`](/commands/fun#ncm)         | `/ncm <目标>`                             | 在网易云音乐搜索指定谱的音乐                           | -      |
 | [`/ncmp`](/commands/fun#ncmp)       | `/ncmp <歌单ID> [A-B]`                    | 在谱面库中搜索指定网易云音乐歌单的音乐                 | -      |
@@ -96,11 +98,3 @@
 | [`/faq`    ](/commands/general#faq)     | `/faq`                      | 显示常见问题                               |
 
 详见[状态与帮助](/commands/general)。
-
-## 其它指令
-
-| 指令                            | 用法                       | 作用                          |
-|---------------------------------|----------------------------|-------------------------------|
-| [`/dcs`   ](/commands/misc#dcs) | `/dcs <start/stop> [参数]` | 开始 Discord 频道消息双向同步 |
-
-详见[其它指令](/commands/misc)。

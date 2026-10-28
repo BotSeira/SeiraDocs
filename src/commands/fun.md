@@ -225,6 +225,18 @@ error = |log10(猜测 Rank) - log10(实际 Rank)|
 
 查询指定地址的 Minecraft 服务器的状态。
 
+## `/mcbind`：Minecraft 服务器消息同步 {#mcbind}
+
+```text
+/mcbind
+```
+
+将当前群聊与某 Minecraft 服务器绑定并开启 MC 服务器消息同步。
+
+需要进行消息同步的服务器需要使用 Velocity 代理并安装 [ChatForwarder](https://github.com/ZayrexDev/ChatForwarder) 插件。
+
+在使用 `/mcbind` 后，会提示在目标服务器中执行相应的命令来启用消息同步。
+
 ## `/ai`：AI 对话控制 {#ai}
 
 ```text

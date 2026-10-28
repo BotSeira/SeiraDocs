@@ -1,6 +1,6 @@
 # 其它指令
 
-## `/dcs`：Discord消息同步 {#dcs}
+## (已废弃) `/dcs`：Discord消息同步 {#dcs}
 
 ```text
 /dcs start <guild-id>.<channel-id>
