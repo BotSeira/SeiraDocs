@@ -280,3 +280,35 @@ AI 在生成回复的时侯可以获取你和最近被提及的人的 osu! 资�
 > 1. 打开网易云音乐官网或App。
 > 2. 点击 `分享->复制链接` 或直接在歌单页面找到歌单的链接。
 > 3. 在歌单的链接中找到ID，例如：`https://music.163.com/m/playlist?id=2930470473&creatorId=1341391754` 找到 `id=` 后的数字，即 `2930470473` 就是歌单ID。
+
+## `/gacha`：osu!gacha功能 {#gacha}
+
+以下为 osu!gacha 相关的功能。
+
+> [!NOTE] 为方便起见，会认为你在 osu!gacha 上的 ID 和 osu！用户名相同...
+
+### `/gacha`：获取玩家档案截图
+
+```text
+/gacha
+/gacha @peppy
+```
+
+### `/gacha cards`：获取玩家卡片信息
+
+获取指定玩家的 osu!gacha 中的卡片的基本信息及其持有者。
+
+```text
+/gacha cards
+/gacha cards @peppy
+```
+
+### `/gacha market`：获取物品市场信息
+
+获取指定物品在 osu!gacha 市场中的价格状态。
+
+```text
+/gacha market
+/gacha market replay_1 5min
+/gacha market boss_trophy
+```
