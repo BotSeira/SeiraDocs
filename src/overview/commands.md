@@ -32,6 +32,7 @@
 | [`/addpp`](/commands/addpp#addpp)    | `/addpp [user] X*Y` 或 `/addpp [user] m谱面ID或rs/bp/rp[N] 条件...` | 估算新增成绩后的总 PP、全球排名及变化；可在成绩参数前加 UID、用户名或 @用户 指定目标 |
 | [`/whatif`](/commands/scores#whatif) | `/whatif <总PPpp 或 #排名>`                                         | 估算总 PP 与全球排名；纯数字默认按排名解析                                           |
 | [`/ux` ](/commands/scores#ux)        | `/ux [UID/用户名/@用户]`                                            | 获取玩家基本数据（文字版）                                                           |
+| [`/o` ](/commands/scores#o)          | `/o [UID/用户名/@用户]`                                             | 获取玩家头像                                                                         |
 | [`/@` ](/commands/scores#ux)         | `/@` 或 `/@用户`                                                    | 相当于 `/ux [@用户]`                                                                 |
 | [`/rbp`](/commands/scores#rbp)       | `/rbp [UID/用户名/@用户]`                                           | 获取随机BP                                                                           |
 | [`/wx`](/commands/scores#wx)         | `/wx <start/stop> [参数]`                                           | 添加指定玩家的指定谱面成绩监视                                                       |
