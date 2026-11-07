@@ -46,8 +46,8 @@
 | [`/m`    ](/commands/beatmaps#m)     | `/m [谱面目标] [Mod]`   | 获取谱面信息                         |
 | [`/bma`  ](/commands/beatmaps#bma)   | `/bma [谱面目标] [Mod]` | 获取谱面分析                         |
 | [`/ap`   ](/commands/beatmaps#ap)    | `/ap [谱面目标]`        | 获取谱面音频预览                     |
-| [`/bpv`  ](/commands/beatmaps#bpv)   | `/bpv <谱面目标> [Mod]` | 生成约 30 秒的 autoplay 谱面游玩预览 |
-| [`/bgp`  ](/commands/beatmaps#bgp)   | `/bgp [谱面目标]`       | 获取谱面背景预览                     |
+| [`/mv`  ](/commands/beatmaps#mv)   | `/mv <谱面目标> [Mod]` | 生成约 30 秒的 autoplay 谱面游玩预览 |
+| [`/mbg`  ](/commands/beatmaps#mbg)   | `/mbg [谱面目标]`       | 获取谱面背景预览                     |
 | [`/ms`   ](/commands/beatmaps#ms)    | `/ms [谱面集目标]`      | 获取谱面集信息                       |
 | [`/dl`   ](/commands/beatmaps#dl)    | `/dl [谱面集目标]`      | 获取谱面集镜像下载入口；可使用 `mp`  |
 | [`/sms`  ](/commands/beatmaps#sms)   | `/sms [#页数] <关键字>` | 搜索谱面集                           |
