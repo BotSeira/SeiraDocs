@@ -312,3 +312,9 @@ AI 在生成回复的时侯可以获取你和最近被提及的人的 osu! 资�
 /gacha market replay_1 5min
 /gacha market boss_trophy
 ```
+
+### `/burning <文字>`：生成一张指定文字着火动图 {#burning}
+
+```text
+/burning deranker
+```

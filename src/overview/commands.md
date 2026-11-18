@@ -25,8 +25,10 @@
 | [`/rs`](/commands/scores#rs)         | `/rs [n/a-b] [UID/用户名/@用户] [过滤条件...]`                      | 无参数查最近一条；支持数量或范围汇总，包含失败                                       |
 | [`/rp`](/commands/scores#rp)         | `/rp [n/a-b] [UID/用户名/@用户]`                                    | 无参数查最近一条通过；支持数量或范围汇总最近通过成绩                                 |
 | [`/tb`](/commands/scores#tb)         | `/tb [#N] [UID/用户名/@用户]`                                       | 获取近 N 天达成的 BP 及其完整 BP 编号                                                |
-| [`/s` ](/commands/scores#s)          | `/s [成绩ID/快捷查询]`                                              | 获取单条成绩图；可使用最近目标                                                       |
-| [`/sa`](/commands/scores#sa)         | `/sa [成绩ID/快捷查询]`                                             | 获取成绩分析图；可使用最近目标                                                       |
+| [`/s` ](/commands/scores#s)          | `/s [成绩ID/快捷查询]`                                              | 获取单条成绩图                                                                       |
+| [`/sm` ](/commands/scores#sm)        | `/sm [谱面ID/快捷查询]`                                             | 获取指定谱面上的一个成绩                                                             |
+| [`/ss` ](/commands/scores#ss)        | `/ss [谱面ID/快捷查询]`                                             | 获取指定谱面上的多个成绩                                                             |
+| [`/sa`](/commands/scores#sa)         | `/sa [成绩ID/快捷查询]`                                             | 获取成绩分析图                                                                       |
 | [`/ma`](/commands/scores#ma)         | `/ma [成绩ID/快捷查询] [n/#n]` `                                    | 列出 Miss 或可视化第 n 个 Miss                                                       |
 | [`/u` ](/commands/scores#u)          | `/u [UID/用户名/@用户]`                                             | 获取玩家资料和最好成绩摘要                                                           |
 | [`/addpp`](/commands/addpp#addpp)    | `/addpp [user] X*Y` 或 `/addpp [user] m谱面ID或rs/bp/rp[N] 条件...` | 估算新增成绩后的总 PP、全球排名及变化；可在成绩参数前加 UID、用户名或 @用户 指定目标 |
@@ -85,6 +87,7 @@
 | [`/ncm`](/commands/fun#ncm)         | `/ncm <目标>`                             | 在网易云音乐搜索指定谱的音乐                           | -      |
 | [`/ncmp`](/commands/fun#ncmp)       | `/ncmp <歌单ID> [A-B]`                    | 在谱面库中搜索指定网易云音乐歌单的音乐                 | -      |
 | [`/gacha`](/commands/fun#gacha)     | `/gacha [参数]`                           | osu!gacha 相关功能                                     | -      ||
+| [`/burning`](/commands/fun#burning) | `/burning <文本>`                         | 生成一张指定文字着火动图🔥🔥🔥                         | -      ||
 
 详见[交互与娱乐](/commands/fun)。
 
