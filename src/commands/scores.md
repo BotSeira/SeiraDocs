@@ -14,7 +14,7 @@
 使用自己的绑定 UID 查询最好成绩并返回单条成绩详情。未指定过滤条件时返回第 1 条；仅指定过滤条件、不指定数量时，会在前 200 条最好成绩中返回第一个符合全部条件的成绩。未绑定时无法使用。
 
 ```text
-/bp acc>=98 mod!~DT
+/bp acc>=98 mod!=DT
 ```
 
 ### 多条汇总
@@ -40,9 +40,9 @@
 
 ```text
 /bp 10 acc>=98 combo>=1000
-/bp 8 peppy mod~HD mod!~DT pp>=300
+/bp 8 peppy mod=HD mod!=DT pp>=300
 /rs 12 time<2:30 rank!=F
-/rp 20 title="Song Name" mapper!~peppy video=true
+/rp 20 title="Song Name" mapper!=peppy video=true
 ```
 
 `<数量>` 表示先获取多少条原始成绩，再在这些成绩上应用过滤；`<范围>`（如 `21-30`）则只展示该范围内的原始成绩，序号仍与普通查询一致。过滤条件会在所选范围内应用，因此过滤后的实际展示数量可能更少。终点超过 100 时，系统会继续获取第 101–200 条后再统一处理。支持的字段和写法如下：
@@ -51,20 +51,21 @@
 
 | 字段                      | 含义                        | 支持的运算符                                         | 示例                                  |
 |---------------------------|-----------------------------|------------------------------------------------------|---------------------------------------|
-| `acc` / `accuracy`        | 准确率，数值按百分比        | `>` `>=` `<` `<=` `=` `!=`                           | `acc>=98.5`                           |
+| `acc` / `accuracy`        | 准确率，数值按百分比        | `>` `>=` `<` `<=` `~` `!~`                           | `acc>=98.5`                           |
 | `combo`                   | 最大连击                    | 数值运算符                                           | `combo>=1000`                         |
 | `pp`                      | PP                          | 数值运算符                                           | `pp>300`                              |
 | `time` / `length` / `len` | 原谱面总时长                | 数值运算符                                           | `time<150`、`time<2:30`、`time<2m30s` |
 | `star` / `sr`             | 星数                        | 数值运算符                                           | `star>=6.5`                           |
 | `cs` `ar` `od` `hp`       | 各种属性                    | 数值运算符                                           | `cs>=7`                               |
 | `bpm`                     | BPM                         | 数值运算符                                           | `bpm>180`                             |
-| `miss`                    | Miss 数                     | 数值运算符                                           | `miss=0`                              |
+| `miss`                    | Miss 数                     | 数值运算符                                           | `miss~0`                              |
 | `score`                   | 总分                        | 数值运算符                                           | `score>=1000000`                      |
 | `ur`                      | 不稳定率                    | 数值运算符                                           | `ur>=100`                             |
-| `rank`                    | 成绩评级                    | `>` `>=` `<` `<=` `=` `!=`                           | `rank>=S`                             |
-| `mod` / `mods`            | Mod 集合                    | `~` 包含、`!~` 不包含、`=` 完全等于、`!=` 不完全等于 | `mod~HD`、`mod=HDDT`、`mod=NM`        |
+| `rank`                    | 成绩评级                    | `>` `>=` `<` `<=` `=` `!=`                           | `rank=S`                              |
+| `client`                  | 游戏客户端                  | `=` `!=`，值为 `lazer` / `stable`                    | `client=lazer`                       |
+| `mod` / `mods`            | Mod 集合                    | `=` 包含、`!=` 不包含、`~` 严格等于、`!~` 不等于 | `mod=HD`、`mod~HDDT`、`mod~NM`        |
 | `replay`                  | 回放是否可用                | `=` `!=`，值为 `true` / `false`                      | `replay=true`                         |
-| `any`                     | 全部谱面文本元数据          | `=` 包含、`!=` 不包含                                | `any=stream`                          |
+| `any`                     | 全部谱面文本元数据          | `=` `!=` `~` `!~`                                    | `any=stream`                          |
 | `title`                   | 歌曲标题（含 Unicode 标题） | `~` `!~` `=` `!=`                                    | `title="Big Black"`                   |
 | `artist`                  | 艺术家（含 Unicode 名称）   | `~` `!~` `=` `!=`                                    | `artist="xi"`                         |
 | `mapper`                  | 谱师                        | `~` `!~` `=` `!=`                                    | `mapper!=peppy`                       |
@@ -78,20 +79,21 @@
 | `nsfw`                    | 是否被标记 NSFW             | `=` `!=`，值为 `true` / `false`                      | `nsfw=false`                          |
 | `fullcombo`               | 是否 Full Combo             | `=` `!=`，值为 `true` / `false`                      | `fullcombo=true`                      |
 
-运算符只支持表格中的符号写法。
-普通文本条件中，`=` 表示包含，`!=` 表示不包含，`~` 表示完全等于，`!~` 表示不等于，匹配不区分大小写。例如 `title="Big Black"` 可匹配 `The Big Black`，`title~"Big Black"` 只匹配完整标题 `Big Black`。`any` 仍仅支持 `=` 和 `!=`；Mod、数值、评级和布尔条件沿用表格中的运算符含义。
+评级、客户端和布尔字段用 `=` 判断相等、`!=` 判断不等，兼容等价的 `~` 和 `!~`。
+
+元数据和 Mod 等匹配字段中，`=` 表示包含，`!=` 表示不包含，`~` 表示严格等于，`!~` 表示不等于。文本匹配不区分大小写。例如 `title="Big Black"` 可匹配 `The Big Black`，`title~"Big Black"` 只匹配完整标题 `Big Black`。数值字段用 `~` / `!~` 判断是否相等。
 过滤值包含空格时，需要用双引号，例如 `title="The Big Black"`；
 双引号不会成为匹配内容的一部分。
 
 `rank` 的比较顺序为 `XH = SSH > X = SS > SH > S > A > B > C > D > F`。例如，`rank>=S` 会匹配 S、SH、SS/X、SSH/XH。
 
-文本条件支持用方括号包裹正则表达式，例如 `title="[^(Blue|Red) Sky$]"`、`artist!=[xi|sakuzyo]`。正则匹配不区分大小写，并在字段文本中查找匹配项。`any` 会同时搜索标题、艺术家、谱师、难度名、来源、标签、曲风和语言等谱面文本元数据，也支持相同的正则写法。
+文本条件用 `=` 或 `!=` 时，支持用方括号包裹正则表达式，例如 `title="[^(Blue|Red) Sky$]"`、`artist!=[xi|sakuzyo]`。正则匹配不区分大小写，并在字段文本中查找匹配项。`any` 会同时搜索标题、艺术家、谱师、难度名、来源、标签、曲风和语言等谱面文本元数据，也支持相同的正则写法。
 
 常用条件可以使用简写：
 
 | 简写                 | 等价条件                               |
 |----------------------|----------------------------------------|
-| `1miss` / `!1miss`   | `miss=1` / `miss!=1`                   |
+| `1miss` / `!1miss`   | `miss~1` / `miss!~1`                   |
 | `video` / `!video`   | `video=true` / `video=false`           |
 | `sb` / `!sb`         | `storyboard=true` / `storyboard=false` |
 | `fc` / `!fc`         | `fullcombo=true` / `fullcombo=false`   |
@@ -128,7 +130,7 @@
 
 ```text
 /rs
-/rs acc>=99 miss=0
+/rs acc>=99 miss~0
 /rs 5
 /rs 5 peppy
 ```
@@ -139,7 +141,7 @@
 
 ```text
 /rp
-/rp pp>=300 mod~HD
+/rp pp>=300 mod=HD
 /rp 5
 /rp 5 124493
 ```
